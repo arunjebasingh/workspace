@@ -1,0 +1,13 @@
+
+public class Triangle {
+
+	private Point pointA;
+	private Point pointB;
+	
+	public void draw() {
+	System.out.println("point A is" +pointA.getX() +pointA.getY());
+	System.out.println("point B is" +pointB.getX() +pointB.getY());
+	}	
+
+	
+}

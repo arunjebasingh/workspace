@@ -1,0 +1,18 @@
+package rest.example.resources;
+
+import java.util.List;
+
+import rest.example.model.Message;
+import rest.example.service.MessageService;
+
+
+@path("messages")
+public class MessageResources {
+
+	MessageService messageservice = new MessageService();
+	
+	public List<Message> getAllMessages(){
+		return messageservice.getAllMessages();
+	}
+	
+}

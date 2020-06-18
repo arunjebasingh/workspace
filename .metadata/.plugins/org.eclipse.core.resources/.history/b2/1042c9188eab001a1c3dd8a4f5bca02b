@@ -1,0 +1,53 @@
+package rest.example.model;
+
+import java.util.Date;
+
+public class Message {
+
+	private long id;
+	private String message;
+	private Srting author;
+	private Date created;
+	
+	public Message() {
+		
+	}
+	
+	public Message(long id, String message, Srting author) {
+		super();
+		this.id = id;
+		this.message = message;
+		this.author = author;
+		this.created= new Date();
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public Srting getAuthor() {
+		return author;
+	}
+	public void setAuthor(Srting author) {
+		this.author = author;
+	}
+	public Date getCreated() {
+		return created;
+	}
+	public void setCreated(Date created) {
+		this.created = created;
+	}
+	
+	
+	
+	
+}

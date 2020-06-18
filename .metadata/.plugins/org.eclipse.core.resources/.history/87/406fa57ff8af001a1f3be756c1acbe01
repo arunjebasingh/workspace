@@ -1,0 +1,12 @@
+
+public class Triangle {
+
+	private Point pointA;
+	private Point pointB;
+	
+	public void draw() {
+	
+	}	
+	
+	
+}

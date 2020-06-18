@@ -1,0 +1,9 @@
+
+public class Triangle {
+
+	
+	public String draw() {
+		return "triangle drawn";
+	}
+	
+}

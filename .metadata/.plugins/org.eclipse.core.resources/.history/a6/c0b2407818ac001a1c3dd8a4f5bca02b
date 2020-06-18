@@ -1,0 +1,43 @@
+package rest.example.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import rest.example.Database.DatabaseClass;
+import rest.example.model.Message;
+
+public class MessageService {
+
+	private Map<Long, Message> map = DatabaseClass.getMessages();
+	
+	public MessageService() {
+		map.put(1L,new Message(1L,"arun","jebas"));
+		map.put(1L,new Message(1L,"adi","jayden"));
+
+	}
+	public List<Message> getAllMessages(){
+		List<Message> list = new ArrayList<>();
+		list.addAll(map.values());
+			return list; 
+	}
+	
+	public Message gerMessage(long id) {
+		return map.get(id);
+	}
+	
+	public Message addMessage(Message message) {
+		message.setId(map.size()+1);
+		map.put(message.getId(), message);
+		return message;
+	}
+	
+	public Message updateMessage(Message message) {
+		map.put(message.getId(),message);
+		return message;
+	}
+	
+	public Message removeMessage(long id) {
+		return map.remove(id);
+	}
+}

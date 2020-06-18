@@ -1,0 +1,53 @@
+package rest.example.resources;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import rest.example.model.Message;
+import rest.example.service.MessageService;
+
+@Path("messages")
+public class MessageResources {
+
+	MessageService messageservice = new MessageService();
+	
+
+	
+	@GET
+	@Path("getallmessages")
+	@Produces(MediaType.APPLICATION_XML)
+	public List<Message> getAllMessages(@QueryParam("year") long year,
+			@QueryParam("start") int start,
+			@QueryParam("end") int end){
+		if (year > 0)
+			return messageservice.getAllMessagesForYear(year);
+		if (start > 0 & end > 0)
+			return messageservice.getAllMessagesForPagination(start, end);
+		return messageservice.getAllMessages();
+	}
+	
+	
+	@GET
+	@Path("{messageId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Message getMessage(@PathParam("messageId") long messageId){
+		return messageservice.getMessage(messageId);
+	}
+	
+	@POST
+	@Path("addmessage")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Message addMessage(Message message){
+		return messageservice.addMessage(message);
+	}
+	
+}

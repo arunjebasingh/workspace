@@ -1,0 +1,9 @@
+127.0.0.1 - - [18/Jun/2020:12:02:23 -0400] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:02:25 -0400] "GET /example/WEB-INF/classes/rest/example/service/MessageService.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:02:43 -0400] "GET /example/WEB-INF/classes/rest/example/service/MessageService.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:02:50 -0400] "GET /example/WEB-INF/classes/rest/example/service/MessageService.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:02:58 -0400] "GET /example/WEB-INF/classes/rest/example/service/MessageService.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:03:02 -0400] "GET /example/WEB-INF/classes/rest/example/service/MessageService.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:03:08 -0400] "GET /example HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:03:09 -0400] "GET /example/ HTTP/1.1" 200 237
+0:0:0:0:0:0:0:1 - - [18/Jun/2020:12:03:11 -0400] "GET /example/webapi/messages HTTP/1.1" 404 713

@@ -1,0 +1,29 @@
+package rest.example.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import rest.example.model.Message;
+
+public class MessageService {
+
+	private Map<Long, Message> map = new HashMap<>();
+	
+	public List<Message> getAllMessages(){
+		List<Message> list = new ArrayList<>();
+			return list; 
+	}
+	
+	public Message gerMessage(long id) {
+		return map.get(id);
+	}
+	
+	public Message addMessage(Message message) {
+		message.setId(map.size()+1);
+		map.put(message.getId(), message);
+		return message;
+	}
+	
+}
