@@ -10,7 +10,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>example</name>
 
-
 	<build>
 		<finalName>example</finalName>
 		<plugins>
@@ -38,7 +37,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 
     <dependencies>
         <dependency>
